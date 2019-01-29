@@ -236,11 +236,11 @@ Key Sections:
     
     **Bad**
     ```ts
-    cb(undefined)
+    callback(undefined)
     ```
     **Good**
     ```ts
-    cb(null)
+    callback(null)
     ```
 
 * Use *truthy* check for **objects** being `null` or `undefined`

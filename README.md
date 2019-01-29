@@ -308,11 +308,13 @@ Key Sections:
 ### Filename
 Name files with `kebab-case`. E.g. `accordian.tsx`, `my-control.tsx`, `navigation-controller.ts`, etc.
 
-    > Reason: Conventional across many JS teams.
+> Reason: Conventional across many JS teams.
 
 ### type vs. interface
 
-    > [Reason](https://palantir.github.io/tslint/rules/interface-over-type-literal/): Interfaces are generally preferred over type literals because interfaces can be implemented, extended and merged.
+Prefer Interface over Type
+
+> Reason: Interfaces are generally preferred over type literals because interfaces can be implemented, extended and merged.
   
 ### TSLint Rules
 

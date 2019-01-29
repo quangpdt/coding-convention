@@ -5,8 +5,15 @@
 
 ## Principles
 
-### Tools not rules
-Configuration is rules, therefore is to replace with tools
+### Tools
+Configuration is rules. Therefore, configuration can be implemented by Tools. 
+
+> Suggested tools:
+
+- Suggested IDE: [IntelliJ](https://www.jetbrains.com/idea/), [WebStorm](https://www.jetbrains.com/webstorm/)
+- Suggested rules definition tools: [TSLint](https://palantir.github.io/tslint/)
+- Suggest code formatting tools: [Prettier](https://prettier.io/)
+
 
 ### Write code for humans
 

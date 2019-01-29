@@ -376,4 +376,4 @@ class X implements FooBar {
 
 # License
 - A part of StyleGuide from [TypeScript Book](https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md)
-- Refer to Principles & Code Style from Mattu, Front-end lead of Scout24
+- Refer to Principles & Code Style from **Mattu, Front-end lead of Scout24**

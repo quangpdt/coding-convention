@@ -52,6 +52,16 @@ Key Sections:
 * [Prettier Rules](#prettier-rules)
 
 ### Variable and Function
+* Generally
+
+    - Use PascalCase for type names.
+    - Do not use "I" as a prefix for interface names.
+    - Use PascalCase for enum values.
+    - Use camelCase for function names.
+    - Use camelCase for property names and local variables.
+    - Do not use "_" as a prefix for private properties.
+    - Use whole words in names when possible.
+
 * Use `camelCase` for variable and function names
 
     > Reason: Conventional JavaScript
@@ -296,7 +306,7 @@ Key Sections:
     > Reasons: Its easier to read. Its used by the TypeScript team. Makes easier to know something is an array as the mind is trained to detect `[]`.
 
 ### Filename
-Name files with `camelCase`. E.g. `accordian.tsx`, `myControl.tsx`, `utils.ts`, `map.ts` etc.
+Name files with `kebab-case`. E.g. `accordian.tsx`, `my-control.tsx`, `navigation-controller.ts`, etc.
 
     > Reason: Conventional across many JS teams.
 
@@ -334,7 +344,11 @@ Name files with `camelCase`. E.g. `accordian.tsx`, `myControl.tsx`, `utils.ts`, 
       "spaces",
       4
     ],
-    "interface-over-type-literal": true
+    "interface-over-type-literal": true,
+    "variable-name": [
+      true,
+      "check-format"
+    ]
   },
   "rulesDirectory": [
     "node_modules/tslint-eslint-rules/dist/rules"

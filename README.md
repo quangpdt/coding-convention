@@ -1,5 +1,25 @@
-# TypeScript StyleGuide and Coding Conventions
+# TypeScript: Principles, Style Guide and Coding Convention
 
+## Principles
+
+### Tools not rules
+Configuration is rules, therefore is to replace with tools
+
+### Write code for humans
+
+1. Readability
+2. Use full words instead of abbreviations 
+3. Be nice to your teammates
+
+### Make it work, then make it better
+Don't optimise for performance prior it works
+
+### Ask for code review
+1. Discussing code is fun and leads to better quality. 
+2. You are responsible for all your code, you write. 
+3. Four eyes see more than two.
+
+## StyleGuide & Coding Convention
 Key Sections:
 
 * [Variable](#variable-and-function)
@@ -16,8 +36,10 @@ Key Sections:
 * [Annotate Arrays as `Type[]`](#array)
 * [File Names](#filename)
 * [`type` vs `interface`](#type-vs-interface)
+* [TSLint Rules](#tslint-rules)
+* [Prettier Rules](#prettier-rules)
 
-## Variable and Function
+### Variable and Function
 * Use `camelCase` for variable and function names
 
 > Reason: Conventional JavaScript
@@ -33,7 +55,21 @@ var fooVar;
 function barFunc() { }
 ```
 
-## Class
+* Try to use positive expectation, be optimistic
+
+> Reason: Make the others feel positive when reading your code
+
+**Bad**
+```ts
+isFailed = true;
+```
+
+**Good**
+```ts
+isSuccessful = false;
+```
+
+### Class
 * Use `PascalCase` for class names.
 
 > Reason: This is actually fairly conventional in standard JavaScript.
@@ -64,7 +100,7 @@ class Foo {
     baz() { }
 }
 ```
-## Interface
+### Interface
 
 * Use `PascalCase` for name.
 
@@ -89,7 +125,7 @@ interface Foo {
 }
 ```
 
-## Type
+### Type
 
 * Use `PascalCase` for name.
 
@@ -100,7 +136,7 @@ interface Foo {
 > Reason: Similar to class
 
 
-## Namespace
+### Namespace
 
 * Use `PascalCase` for names
 
@@ -117,7 +153,7 @@ namespace Foo {
 }
 ```
 
-## Enum
+### Enum
 
 * Use `PascalCase` for enum names
 
@@ -151,7 +187,7 @@ enum Color {
 }
 ```
 
-## Null vs. Undefined
+### Null vs. Undefined
 
 * Prefer not to use either for explicit unavailability
 
@@ -212,7 +248,7 @@ if (error !== null)
 if (error != undefined)
 ```
 
-## Formatting
+### Formatting
 The TypeScript compiler ships with a very nice formatting language service. Whatever output it gives by default is good enough to reduce the cognitive overload on the team.
 
 Use [`tsfmt`](https://github.com/vvakame/typescript-formatter) to automatically format your code on the command line. Also your IDE (atom/vscode/vs/sublime) already has formatting support built-in.
@@ -223,7 +259,7 @@ Examples:
 const foo: string = "hello";
 ```
 
-## Quotes
+### Quotes
 
 * Prefer single quotes (`'`) unless escaping.
 
@@ -235,30 +271,30 @@ const foo: string = "hello";
 
 > Reason: These generally represent the intent of complex enough strings.
 
-## Spaces
+### Spaces
 
 * Use `2` spaces. Not tabs.
 
 > Reason: More JavaScript teams do this (e.g. [airbnb](https://github.com/airbnb/javascript), [idiomatic](https://github.com/rwaldron/idiomatic.js), [standard](https://github.com/feross/standard), [npm](https://github.com/npm/npm), [node](https://github.com/nodejs/node), [google/angular](https://github.com/angular/angular/), [facebook/react](https://github.com/facebook/react)). The TypeScript/VSCode teams use 4 spaces but are definitely the exception in the ecosystem.
 
-## Semicolons
+### Semicolons
 
 * Use semicolons.
 
 > Reasons: Explicit semicolons helps language formatting tools give consistent results. Missing ASI (automatic semicolon insertion) can trip new devs e.g. `foo() \n (function(){})` will be a single statement (not two). Recommended by TC39 as well.
 
-## Array
+### Array
 
 * Annotate arrays as `foos:Foo[]` instead of `foos:Array<Foo>`.
 
 > Reasons: Its easier to read. Its used by the TypeScript team. Makes easier to know something is an array as the mind is trained to detect `[]`.
 
-## Filename
+### Filename
 Name files with `camelCase`. E.g. `accordian.tsx`, `myControl.tsx`, `utils.ts`, `map.ts` etc.
 
 > Reason: Conventional across many JS teams.
 
-## type vs. interface
+### type vs. interface
 
 * Use `type` when you *might* need a union or intersection:
 
@@ -280,6 +316,62 @@ class X implements FooBar {
 }
 ```
 * Otherwise use whatever makes you happy that day.
+
+### TSLint Rules
+
+```json
+{
+  "rules": {
+    "no-duplicate-variable": true,
+    "no-unused-variable": [
+      true
+    ],
+    "prefer-const": true,
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape"
+    ],
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "radix": true
+  },
+  "rulesDirectory": [
+    "node_modules/tslint-eslint-rules/dist/rules"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules",
+      "platforms"
+    ]
+  }
+}
+```
+
+### Prettier Rules
+```json
+{
+  "trailingComma": "none",
+  "tabWidth": 4,
+  "proseWrap": "never",
+  "printWidth": 120,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "src/**/*.html",
+      "options": {
+        "parser": "angular"
+      }
+    }
+  ]
+}
+```
 
 # License
 - A part of StyleGuide from [TypeScript Book](https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md)

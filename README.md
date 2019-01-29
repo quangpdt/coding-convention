@@ -1,4 +1,5 @@
-# TypeScript: Principles, Style Guide and Coding Convention
+# TypeScript & Angular
+## Principles, Style Guide and Coding Convention
 
 ## Principles
 

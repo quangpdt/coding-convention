@@ -61,7 +61,7 @@ function BarFunc() { }
 ```
 **Good**
 ```ts
-var fooVar;
+let fooVar;
 function barFunc() { }
 ```
 

@@ -1,9 +1,5 @@
 # TypeScript StyleGuide and Coding Conventions
 
-> An unofficial TypeScript StyleGuide
-
-People have asked me for my opinions on this. Personally I don't enforce these a lot on my teams and projects but it does help to have these mentioned as a tie breaker when someone feels the need to have such strong consistency. There are other things that I feel much more strongly about and those are covered in the [tips chapter](../tips/main.md) (e.g. type assertion is bad, property setters are bad) 🌹.
-
 Key Sections:
 
 * [Variable](#variable-and-function)
@@ -285,5 +281,5 @@ class X implements FooBar {
 ```
 * Otherwise use whatever makes you happy that day.
 
-#License
+# License
 - A part of StyleGuide from [TypeScript Book](https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md)

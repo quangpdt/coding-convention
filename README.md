@@ -54,32 +54,35 @@ Key Sections:
 ### Variable and Function
 * Use `camelCase` for variable and function names
 
-> Reason: Conventional JavaScript
-
-**Bad**
-```ts
-var FooVar;
-function BarFunc() { }
-```
-**Good**
-```ts
-let fooVar;
-function barFunc() { }
-```
+    > Reason: Conventional JavaScript
+    
+    **Bad**
+    ```ts
+    var FooVar;
+    function BarFunc() { }
+    ```
+    **Good**
+    ```ts
+    let fooVar;
+    function barFunc() { }
+    ```
 
 * Try to use positive expectation, be optimistic
 
-> Reason: Make the others feel positive when reading your code
+    > Reason: Make the others feel positive when reading your code
+    
+    **Bad**
+    ```ts
+    isFailed = true;
+    ```
+    
+    **Good**
+    ```ts
+    isSuccessful = false;
+    ```
 
-**Bad**
-```ts
-isFailed = true;
-```
+* Do not use "_" as a prefix for private properties.
 
-**Good**
-```ts
-isSuccessful = false;
-```
 
 ### Class
 * Use `PascalCase` for class names.
@@ -297,27 +300,8 @@ Name files with `camelCase`. E.g. `accordian.tsx`, `myControl.tsx`, `utils.ts`, 
 
 ### type vs. interface
 
-* Use `type` when you *might* need a union or intersection:
-
-```
-type Foo = number | { someProperty: number }
-```
-* Use `interface` when you want `extends` or `implements` e.g
-
-```
-interface Foo {
-  foo: string;
-}
-interface FooBar extends Foo {
-  bar: string;
-}
-class X implements FooBar {
-  foo: string;
-  bar: string;
-}
-```
-* Otherwise use whatever makes you happy that day.
-
+> [Reason](https://palantir.github.io/tslint/rules/interface-over-type-literal/): Interfaces are generally preferred over type literals because interfaces can be implemented, extended and merged.
+  
 ### TSLint Rules
 
 ```json
@@ -341,7 +325,14 @@ class X implements FooBar {
       true,
       "allow-null-check"
     ],
-    "radix": true
+    "radix": true,
+    "import-spacing": true,
+    "indent": [
+      true,
+      "spaces",
+      4
+    ],
+    "interface-over-type-literal": true
   },
   "rulesDirectory": [
     "node_modules/tslint-eslint-rules/dist/rules"

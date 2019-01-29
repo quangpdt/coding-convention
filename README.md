@@ -248,17 +248,6 @@ if (error !== null)
 if (error != undefined)
 ```
 
-### Formatting
-The TypeScript compiler ships with a very nice formatting language service. Whatever output it gives by default is good enough to reduce the cognitive overload on the team.
-
-Use [`tsfmt`](https://github.com/vvakame/typescript-formatter) to automatically format your code on the command line. Also your IDE (atom/vscode/vs/sublime) already has formatting support built-in.
-
-Examples:
-```ts
-// Space before type i.e. foo:<space>string
-const foo: string = "hello";
-```
-
 ### Quotes
 
 * Prefer single quotes (`'`) unless escaping.
@@ -273,7 +262,7 @@ const foo: string = "hello";
 
 ### Spaces
 
-* Use `2` spaces. Not tabs.
+* Use `4` spaces. Not tabs.
 
 > Reason: More JavaScript teams do this (e.g. [airbnb](https://github.com/airbnb/javascript), [idiomatic](https://github.com/rwaldron/idiomatic.js), [standard](https://github.com/feross/standard), [npm](https://github.com/npm/npm), [node](https://github.com/nodejs/node), [google/angular](https://github.com/angular/angular/), [facebook/react](https://github.com/facebook/react)). The TypeScript/VSCode teams use 4 spaces but are definitely the exception in the ecosystem.
 

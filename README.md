@@ -1,6 +1,8 @@
 # TypeScript & Angular
 ## Principles, Style Guide and Coding Convention
 
+> **Disclaimer**: This note is not originally written by me. I collected information from some repository on Github as well as from my co-workers and try to contribute as much as possible. If you found any issue or want to contribute to this note, feel free to make a PR. Peace!
+
 ## Principles
 
 ### Tools not rules

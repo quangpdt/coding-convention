@@ -61,6 +61,9 @@ Key Sections:
     - Use camelCase for property names and local variables.
     - Do not use "_" as a prefix for private properties.
     - Use whole words in names when possible.
+    
+* Use a single declaration per variable statement 
+    > E.g: Use `var x = 1; var y = 2;` over `var x = 1, y = 2;`.
 
 * Use `camelCase` for variable and function names
 
@@ -92,7 +95,7 @@ Key Sections:
     ```
 
 * Do not use "_" as a prefix for private properties.
-
+    > Refer to [TSLint Variable Name](https://palantir.github.io/tslint/rules/variable-name/)
 
 ### Class
 * Use `PascalCase` for class names.
@@ -306,9 +309,12 @@ Key Sections:
     > Reasons: Its easier to read. Its used by the TypeScript team. Makes easier to know something is an array as the mind is trained to detect `[]`.
 
 ### Filename
-Name files with `kebab-case`. E.g. `accordian.tsx`, `my-control.tsx`, `navigation-controller.ts`, etc.
+- Name files with `kebab-case`. E.g. `accordian.tsx`, `my-control.tsx`, `navigation-controller.ts`, etc.
 
-> Reason: Conventional across many JS teams.
+    > Reason: Conventional across many JS teams.
+
+- 1 file per logical component (e.g. parser, scanner, emitter, checker).
+
 
 ### type vs. interface
 

@@ -49,6 +49,7 @@ Key Sections:
 * [File Names](#filename)
 * [`type` vs `interface`](#type-vs-interface)
 * [TSLint Rules](#tslint-rules)
+* [Editor Config](#editor-config)
 * [Prettier Rules](#prettier-rules)
 
 ### Variable and Function
